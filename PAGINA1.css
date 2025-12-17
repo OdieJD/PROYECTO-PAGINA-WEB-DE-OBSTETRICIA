@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%; 
+}
+#logo {
+    color: #fff;
+    display: flex; 
+    align-items: center; 
+}
+#titulo-header {
+    text-align: left; 
+    color: #FFFFFF; 
+    margin-left: 15px;
+}
+.titulo-principal {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+}
+header nav{
+    height: 50px;
+}
+header nav ul{
+    list-style: none;
+}
+header nav a{
+    text-decoration: none;
+    padding: 20px;
+}
+header nav ul li{
+    float: left;
+}
+.subtitulo-universidad {
+    font-size: 1em; 
+    margin: 0;
+    font-weight: 300;
+}
+#facultadimagen a{
+    border-radius: 10%;
+    background-color: #5a0024;
+   width: 150px;
+   height: auto;
+}
+header{
+    width: 100%;
+    height: 116px;
+    background-color:#5a0024; 
+    padding: 1rem 0;
+    text-align: center;
+}
+a{
+    color: #fff; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+#logoobstetricia{
+    width: 100px;
+    height: 100px;
+    margin-top: -7px;
+    float: left;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6 ;
+}
+#facultadimagen {
+    background-image: url(https://i.imgur.com/v9ld7MX.jpeg);
+    background-size: cover;       
+    background-position: center;  
+    height: 600px;                
+    display: flex;                
+    flex-direction: column;       
+    align-items: center;         
+    justify-content: center;      
+    text-align: center;           
+    padding: 0 20px;             
+}
+#bannerinferior {
+    margin-top: 100px;    
+    margin-bottom: 100px; 
+    background-color: #5a0024;
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;    
+    padding-bottom: 70px; 
+    padding-left: 10%;    
+    padding-right: 10%;
+}
+
+#bannerinferior h2 {
+    margin-bottom: 15px; 
+    font-size: 2rem;
+    color: #fff;         
+}
+
+#bannerinferior p {
+    margin: 0;           
+    font-size: 1.2rem;
+    line-height: 1.6;    
+}
+#autoridades, #plandeestudios, #redessociales {
+    margin-top: 100px;
+    border-radius: 10%;
+    background-color:#c893a5;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+.cajasinicio {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
+    margin: 40px auto; 
+}
+.cajasinicio section {
+    flex-basis: 33.33%; 
+    flex-grow: 1; 
+    flex-shrink: 1;
+}
+header h1 {
+    font-weight: 300; 
+    margin-bottom: 5px;
+}
+
+.container {
+    max-width: 1400px; 
+    margin: 0 auto;    
+    padding: 0 15px;  
+}
+
+h2 {
+    color: #fff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.piedepaginacontenedor {
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 15px; 
+    gap: 60px; 
+}
+footer p {
+    text-align: left;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a:hover {
+    text-decoration: underline; 
+}
+.logopie {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 15px; 
+    margin-bottom: 15px;
+}
+footer section {
+    flex: 1; 
+    padding: 0; 
+}
+#piedepagina h2 {
+    font-size: 1.2rem;
+    margin: 0; 
+    text-align: left;
+}
+
+#piedepagina p {
+    text-align: left;
+    font-size: 0.9rem;
+}
+#logofooter {
+    width: 60px; 
+    height: auto;
+}
+#siguenos .facebook {
+    display: flex;         
+    flex-direction: row;   
+    align-items: center;   
+    gap: 15px;             
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;    
+}
+
+#siguenos .facebookimg {
+    width: 35px;          
+    height: auto;
+    display: block;     
+}
+#siguenos h1 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+footer {
+    height: 390px;
+    background-color: #5a0024;
+    color: white;
+    padding: 60px 0; 
+    width: 100%;
+    margin-top: 0; 
+}
