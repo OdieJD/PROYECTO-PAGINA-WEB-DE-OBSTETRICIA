@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*PAGINA 1*/
+
 .container-header {
     display: flex;
     justify-content: space-between; 
@@ -229,3 +231,4 @@ footer {
     width: 100%;
     margin-top: 0; 
 }
+/* PAGINA 2*/
