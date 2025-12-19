@@ -43,6 +43,7 @@ header nav ul li{
     float: left;
 }
 .subtitulo-universidad {
+    color: #fff;
     font-size: 1em; 
     margin: 0;
     font-weight: 300;
@@ -79,6 +80,7 @@ body {
 }
 #facultadimagen {
     background-image: url(https://i.imgur.com/v9ld7MX.jpeg);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
     background-size: cover;       
     background-position: center;  
     height: 600px;                
@@ -123,6 +125,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 .cajasinicio {
     display: flex; 
@@ -185,6 +188,7 @@ footer ul li a:hover {
     gap: 15px; 
     margin-bottom: 15px;
 }
+
 footer section {
     flex: 1; 
     padding: 0; 
@@ -232,3 +236,111 @@ footer {
     margin-top: 0; 
 }
 /* PAGINA 2*/
+
+.contenedor-facultad {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fila-mision-vision {
+    display: flex;
+    gap: 100px;
+    width: 100%;
+}
+#mision2, #vision2 {
+    flex: 1; 
+    background-color: #c893a5;
+    border-radius: 50px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+#resenas2 {
+    background-color: #c893a5;
+    border-radius: 50px;
+    padding: 40px;
+    width: 100%; 
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+#mision2 h2, #vision2 h2, #resenas2 h2,
+#mision2 p, #vision2 p, #resenas2 p {
+    color: white;
+}
+#imagenes2 {
+    width: 100%;
+    display: flex;          
+    justify-content: center; 
+    margin-top: 30px;       
+    margin-bottom: 20px;    
+}
+
+#imagenes2 img {
+    max-width: 90%;         
+    height: auto;           
+    border-radius: 15px;   
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+}
+#autoridades2 {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.titulo-seccion-autoridades {
+    text-align: center;
+    color: #5a0024; 
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+.tarjeta-autoridad {
+    display: flex;       
+    align-items: center; 
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.foto-autoridad img {
+    width: 150px;         
+    height: 150px;
+    border-radius: 50%;    
+    object-fit: cover;     
+    margin-right: 30px;  
+    border: 3px solid #c893a5;
+}
+
+.info-autoridad h3 {
+    color: #5a0024;
+    margin-bottom: 5px;
+}
+
+.cargo {
+    font-weight: bold;
+    color: #c893a5;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.descripcion {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Para celulares: se pone uno debajo del otro */
+@media (max-width: 600px) {
+    .tarjeta-autoridad {
+        flex-direction: column;
+        text-align: center;
+    }
+    .foto-autoridad img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
