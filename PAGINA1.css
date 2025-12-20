@@ -332,15 +332,137 @@ footer {
     color: #555;
     line-height: 1.5;
 }
+/* PAGINA 3 */
 
-/* Para celulares: se pone uno debajo del otro */
-@media (max-width: 600px) {
-    .tarjeta-autoridad {
-        flex-direction: column;
-        text-align: center;
-    }
-    .foto-autoridad img {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+#imagenes-carrera {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+#imagenes-carrera img {
+    width: 90%;
+    max-width: 1100px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+#perfil-carrera {
+    background-color: #c893a5;
+    color: white;
+    padding: 35px;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ESTILO DE CUADROS DESPLEGABLES */
+.malla-curricular {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.ciclo-desplegable {
+    background-color: #5a0024; 
+    border: none;          
+    border-radius: 12px;
+    transition: 0.3s;
+    margin-bottom: 10px;     
+    overflow: hidden;
+}
+
+.ciclo-desplegable summary {
+    padding: 18px 25px;
+    list-style: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;            
+    display: flex;
+    justify-content: space-between;
+}
+
+.ciclo-desplegable summary:hover {
+   background-color: #7a0031; 
+}
+
+.contenido-ciclo {
+    padding: 20px 40px;
+    background-color: #fff;  
+    color: #333;
+}
+
+.contenido-ciclo ul li {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Giro de flecha al abrir */
+.ciclo-desplegable[open] summary {
+   background-color: #5a0024; 
+    border-bottom: 1px solid rgba(255,255,255,0.2); 
+}
+.fila-perfiles {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cuadro-perfil {
+    flex: 1;
+    background-color: #c893a5;
+    color: white;
+    padding: 30px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.cuadro-perfil p {
+    line-height: 1.6;    
+    text-align: justify; 
+    font-size: 0.95rem;  
+    margin-top: 15px;
+}
+#investigacion-carrera, #practicas-convenios {
+    background-color: #c893a5;
+    color: white;
+    padding: 40px 50px;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+#practicas-convenios {
+    background-color: #c893a5;
+    color: white;
+    padding: 40px;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 10px; /* Reducido de 20px a 10px */
+    width: 100%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+#practicas-convenios ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#practicas-convenios li {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 5px auto;
+    padding: 8px;
+    border-radius: 10px;
+    max-width: 500px;
+}
+#investigacion-carrera p {
+    line-height: 1.7;   
+    text-align: justify; 
+    max-width: 900px;   
+    margin: 0 auto;     
+    
 }
