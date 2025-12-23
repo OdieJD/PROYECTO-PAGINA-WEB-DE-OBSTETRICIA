@@ -308,6 +308,16 @@ footer {
     border-radius: 15px;   
     box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
 }
+.link-cv {
+    text-decoration: none; 
+    color: #5a0024;       
+    transition: 0.3s;
+}
+
+.link-cv:hover {
+    color: #c893a5;      
+    text-decoration: underline; 
+}
 #autoridades2 {
     max-width: 1000px;
     margin: 40px auto;
