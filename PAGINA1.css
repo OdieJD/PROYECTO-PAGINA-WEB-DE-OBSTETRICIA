@@ -28,6 +28,7 @@
     font-weight: 600;
     margin: 0;
     text-transform: uppercase;
+     letter-spacing: 1px;
 }
 header nav{
     display: flex;       
@@ -35,31 +36,46 @@ header nav{
     gap: 20px;
 }
 .boton-aula {
-   background-color: #fff;      
+    background-color: #fff;      
     color: #5a0024;              
-    padding: 8px 15px;
-    border-radius: 5px;
+    padding: 8px 18px;
+    border-radius: 25px; 
     text-decoration: none;
     font-weight: bold;
     font-size: 0.8rem;
     transition: 0.3s;
-    border: 2px solid transparent;
-    margin-top: -2px; 
+    border: 2px solid #fff;
     display: inline-block; 
-    vertical-align: middle;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-
 .boton-aula:hover {
     background-color: transparent;
     color: #fff;
-    border: 2px solid #fff;     
+    transform: scale(1.05);    
 }
 header nav ul{
     list-style: none;
 }
 header nav a{
     text-decoration: none;
-    padding: 20px;
+    padding: 10px 15px;
+    position: relative;
+    font-weight: 400;
+    transition: 0.3s;
+}
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 50%;
+    background-color: #c893a5;
+    transition: all 0.3s ease;
+}
+header nav a:hover::after {
+    width: 60%;
+    left: 20%;
 }
 header nav ul li{
     float: left;
@@ -69,6 +85,7 @@ header nav ul li{
     font-size: 1em; 
     margin: 0;
     font-weight: 300;
+    opacity: 0.9;
 }
 #facultadimagen a{
     border-radius: 10%;
@@ -77,11 +94,15 @@ header nav ul li{
    height: auto;
 }
 header{
-    width: 100%;
-    height: 116px;
-    background-color:#5a0024; 
+   width: 100%;
+    height: auto; 
+    background: linear-gradient(135deg, #5a0024 0%, #7a0031 100%); 
     padding: 1rem 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 a{
     color: #fff; 
@@ -92,39 +113,37 @@ a{
     width: 100px;
     height: 100px;
     margin-top: -7px;
-    float: left;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2)); 
 }
-
 body {
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6 ;
+    background-color: #fdfdfd;
 }
 #facultadimagen {
-    background-image: url(https://i.imgur.com/v9ld7MX.jpeg);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://i.imgur.com/v9ld7MX.jpeg);
     background-size: cover;       
     background-position: center;  
+    background-attachment: fixed; /* Parallax */
     height: 600px;                
     display: flex;                
     flex-direction: column;       
     align-items: center;         
     justify-content: center;      
     text-align: center;           
-    padding: 0 20px;             
+    padding: 0 20px;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5);     
 }
 #bannerinferior {
-    margin-top: 100px;    
-    margin-bottom: 100px; 
-    background-color: #5a0024;
+    margin: 80px 0;
+    background: linear-gradient(45deg, #5a0024, #7a0031);
     color: #fff;
     text-align: center;
-    padding-top: 50px;    
-    padding-bottom: 70px; 
-    padding-left: 10%;    
-    padding-right: 10%;
+    padding: 60px 15%;
+    border-radius: 0; 
+    position: relative;
 }
-
 #bannerinferior h2 {
     margin-bottom: 15px; 
     font-size: 2rem;
@@ -137,17 +156,24 @@ body {
     line-height: 1.6;    
 }
 #autoridades, #plandeestudios, #redessociales {
-    margin-top: 100px;
-    border-radius: 10%;
-    background-color:#c893a5;
-    height: 230px;
+     margin-top: 60px;
+    border-radius: 20px; 
+    background: linear-gradient(145deg, #c893a5, #b88395);
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+#autoridades:hover, #plandeestudios:hover, #redessociales:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(90, 0, 36, 0.2);
+    background: #c893a5;
 }
 .cajasinicio {
     display: flex; 
@@ -250,12 +276,11 @@ footer section {
     text-transform: uppercase;
 }
 footer {
-    height: 390px;
-    background-color: #5a0024;
+     background-color: #3d0018; 
     color: white;
     padding: 60px 0; 
     width: 100%;
-    margin-top: 0; 
+    border-top: 5px solid #c893a5;
 }
 
 /* PAGINA 2*/
@@ -274,21 +299,27 @@ footer {
     gap: 100px;
     width: 100%;
 }
-#mision2, #vision2 {
-    flex: 1; 
-    background-color: #c893a5;
-    border-radius: 50px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+#mision2, #vision2{
+   background: linear-gradient(145deg, #c893a5, #b88395);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: 0.3s;
 }
 #resenas2 {
-    background-color: #c893a5;
-    border-radius: 50px;
+   background: linear-gradient(145deg, #c893a5, #b88395);
+    border-radius: 30px;
     padding: 40px;
-    width: 100%; 
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: 0.3s;
+}
+#mision2:hover, #vision2:hover {
+    transform: scale(1.02);
+}
+#resenas2:hover {
+    transform: scale(1.02);
 }
 #mision2 h2, #vision2 h2, #resenas2 h2,
 #mision2 p, #vision2 p, #resenas2 p {
@@ -338,8 +369,15 @@ footer {
     margin-bottom: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    border-left: 5px solid transparent;
 }
-
+.tarjeta-autoridad:hover {
+    background-color: #fff;
+    border-left: 5px solid #5a0024;
+    transform: translateX(10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
 .foto-autoridad img {
     width: 150px;         
     height: 150px;
@@ -407,9 +445,14 @@ footer {
     margin-bottom: 10px;  
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);   
     overflow: hidden;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
 }
-
+#practicas-convenios:hover {
+    transform: scale(1.02);
+}
 .ciclo-desplegable summary {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 18px 25px;
     list-style: none;
     cursor: pointer;
@@ -417,8 +460,18 @@ footer {
     color: white;            
     display: flex;
     justify-content: space-between;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
 }
-
+#investigacion-carrera:hover {
+    transform: scale(1.02);
+}
+#egresado:hover {
+    transform: scale(1.02);
+}
+#ingresante:hover {
+    transform: scale(1.02);
+}
 .ciclo-desplegable summary:hover {
    background-color: #7a0031; 
 }
@@ -435,6 +488,7 @@ footer {
 }
 
 .ciclo-desplegable[open] summary {
+    
    background-color: #5a0024; 
     border-bottom: 1px solid rgba(255,255,255,0.2); 
 }
@@ -445,6 +499,9 @@ footer {
 }
 
 .cuadro-perfil {
+    background: linear-gradient(145deg, #c893a5, #b88395);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
     flex: 1;
     background-color: #c893a5;
     color: white;
@@ -527,8 +584,6 @@ footer {
     margin-bottom: 30px;
     grid-column: 1; 
 }
-
-
 .ubicacion-title {
     grid-column: 1 / -1; 
     margin-top: 40px;
@@ -544,8 +599,12 @@ footer {
     width: 45px; 
     height: auto;
     margin-right: 20px;
+    filter:saturate(5) hue-rotate(300deg); /* Tiñe iconos al color institucional */
+    transition: 0.3s;
 }
-
+.item:hover img {
+    transform: rotate(-10deg) scale(1.1);
+}
 .item h3 {
     font-size: 15px;
     font-weight: bold;
@@ -570,7 +629,7 @@ footer {
 }
 
 .facebookimg {
-    width: 60px; /* Tamaño del logo de FB */
+    width: 60px; 
     transition: transform 0.3s ease;
 }
 
@@ -578,9 +637,15 @@ footer {
     transform: scale(1.1);
 }
 iframe {
-    grid-column: 1 / -1; /* Hace que el mapa ocupe todo el ancho */
+    border: 10px solid white;
+    filter: grayscale(0.2);
+    transition: 0.5s;
+    grid-column: 1 / -1; 
     width: 100%;
     height: 350px;
     border-radius: 4px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.1); /* Sombra suave como en la imagen */
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1); 
+}
+iframe:hover {
+    filter: grayscale(0);
 }
