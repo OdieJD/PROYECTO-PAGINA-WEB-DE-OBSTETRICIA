@@ -532,7 +532,7 @@ footer {
     padding: 40px;
     border-radius: 50px;
     text-align: center;
-    margin-bottom: 10px; /* Reducido de 20px a 10px */
+    margin-bottom: 10px; 
     width: 100%;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
@@ -599,7 +599,7 @@ footer {
     width: 45px; 
     height: auto;
     margin-right: 20px;
-    filter:saturate(5) hue-rotate(300deg); /* Tiñe iconos al color institucional */
+    filter:saturate(5) hue-rotate(300deg); 
     transition: 0.3s;
 }
 .item:hover img {
@@ -648,4 +648,46 @@ iframe {
 }
 iframe:hover {
     filter: grayscale(0);
+}
+/*CELULAR*/
+/* --- ESTILOS PARA CELULARES (DISEÑO RESPONSIVE) --- */
+@media (max-width: 768px) {
+    /* 1. El encabezado se vuelve vertical */
+    .container-header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    #logo {
+        margin-bottom: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* 2. El menú se apila para que no se amontone */
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    header nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* 3. Las cuadrículas (como la de contacto) se vuelven de 1 sola columna */
+    .contacto-grid, .cuadros-informativos-carrera {
+        grid-template-columns: 1fr !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 4. Ajuste para que las fotos no se deformen */
+    .item img, .foto-autoridad img {
+        margin: 0 auto 15px;
+        display: block;
+    }
 }
