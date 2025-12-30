@@ -650,44 +650,62 @@ iframe:hover {
     filter: grayscale(0);
 }
 /*CELULAR*/
-/* --- ESTILOS PARA CELULARES (DISEÑO RESPONSIVE) --- */
-@media (max-width: 768px) {
-    /* 1. El encabezado se vuelve vertical */
+/* --- AJUSTE PARA QUE EL MENÚ NO SE AMONTONE --- */
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Obliga a que se mantengan en una sola fila */
+    padding: 0 20px;
+}
+
+#logo {
+    flex-shrink: 1; /* Permite que el logo se encoja un poco si es necesario */
+}
+
+.titulo-principal {
+    font-size: 1.2em; /* Reducimos un poquito el título para ganar espacio */
+    white-space: nowrap; /* Evita que el título se parta en dos líneas */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre botones */
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    padding: 10px 8px; /* Reducimos el relleno interno de los enlaces */
+    font-size: 13px;   /* Letra un poco más pequeña para que quepa todo */
+}
+
+.boton-aula {
+    padding: 6px 12px;
+    font-size: 12px;
+    white-space: nowrap; /* Que el botón no se deforme */
+}
+
+/* Solo si la pantalla es realmente muy pequeña (celulares antiguos), 
+   ahí sí permitimos que se vea uno sobre otro para que sea legible */
+@media (max-width: 600px) {
     .container-header {
         flex-direction: column;
         height: auto;
-        padding: 20px 10px;
+        padding: 15px;
     }
-
-    #logo {
-        margin-bottom: 20px;
+    header nav {
         flex-direction: column;
-        text-align: center;
+        width: 100%;
     }
-
-    /* 2. El menú se apila para que no se amontone */
     header nav ul {
-        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
-    }
-
-    header nav a {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    /* 3. Las cuadrículas (como la de contacto) se vuelven de 1 sola columna */
-    .contacto-grid, .cuadros-informativos-carrera {
-        grid-template-columns: 1fr !important;
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* 4. Ajuste para que las fotos no se deformen */
-    .item img, .foto-autoridad img {
-        margin: 0 auto 15px;
-        display: block;
     }
 }
